@@ -21,14 +21,13 @@ We include the most relevant quantification methods, aiming for their applicabil
 
 To install our `mlquantify` R package, first you should install the `devtools` package from CRAN as follow:
 
-```r
-install.packages("devtools")
-```
-
-After that, our package can be installed typing:
 
 ```r
-devtools::install_git(url = "https://gitlab.com/andregustavom/mlquantify.git")
+if (!require("devtools")) {
+    install.packages("devtools")
+}
+devtools::install_github("andregustavom/mlquantify")
+library("mlquantify")
 ```
 
 ## How to use
