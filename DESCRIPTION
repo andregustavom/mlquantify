@@ -1,0 +1,27 @@
+Package: mlquantify
+Type: Package
+Title: Algorithms for Class Distribution Estimation
+Version: 0.0.0.9000
+Authors@R: c(
+    person("Andre", "Maletzke", email = "andregustavom@gmail.com", role = c("aut","cre")),
+    person("Everton", "Cherman", email = "evertoncherman@gmail.com", role = "ctb"),
+    person("Gustavo", "Batista", email = "g.batista@unsw.edu.au", role = "ths"))
+Maintainer: Andre Maletzke <andregustavom@gmail.com>
+Description: Quantification is a prominent machine learning task that has received an 
+    increasing amount of attention in the last years. The objective is to predict the 
+    class distribution of a data sample. This package is a collection of machine learning 
+    algorithms for class distribution estimation. This package include algorithms from
+    different paradigms of quantification.
+License: GPL (>= 2.0)
+Encoding: UTF-8
+LazyData: true
+NeedsCompilation: no
+Author: Andre Maletzke [aut, cre],
+  Everton Cherman [ctb],
+  Gustavo Batista [ths]
+RoxygenNote: 7.1.1
+URL: https://gitlab.com/andregustavom/mlquantify.git
+Imports: 
+    caret,
+    stats,
+    randomForest
