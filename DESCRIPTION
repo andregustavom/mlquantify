@@ -20,7 +20,7 @@ Author: Andre Maletzke [aut, cre],
   Everton Cherman [ctb],
   Gustavo Batista [ths]
 RoxygenNote: 7.1.1
-URL: https://gitlab.com/andregustavom/mlquantify.git
+URL: https://github.com/andregustavom/mlquantify
 Imports: 
     caret,
     stats,
