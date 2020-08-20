@@ -14,9 +14,8 @@ Description: Quantification is a prominent machine learning task that has receiv
     different paradigms of quantification. These methods are described in the paper: 
     A. Maletzke, W. Hassan, D. d. Reis, and G. Batista. The importance of the test set 
     size in quantification assessment. In Proceedings of the Twenty-Ninth International 
-    Joint Conferenceon Artificial Intelligence, IJCAI-20, pages 2640–2646. International 
-    Joint Conferences on Artificial Intelligence Organization, 2020. 
-    <doi: doi.org//10.24963/ijcai.2020/366>.
+    Joint Conference on Artificial Intelligence, IJCAI-20, pages 2640–2646, 2020.
+    <doi:10.24963/ijcai.2020/366>.
 License: GPL (>= 2.0)
 Encoding: UTF-8
 LazyData: true
