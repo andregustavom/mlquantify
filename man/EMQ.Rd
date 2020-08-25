@@ -9,7 +9,8 @@ EMQ(train, test, it=5, e=NULL)
 \arguments{
 \item{train}{a \code{data.frame} of the labeled set.}
 
-\item{test}{a numeric vector of scores predicted from the test set.}
+\item{test}{a numeric \code{matrix} of scores predicted from each test set instance.
+First column must be the positive score.}
 
 \item{it}{maximum number of iteration steps (default \code{5}).}
 
@@ -46,5 +47,5 @@ EMQ(train=tr, test=test.scores)
 \references{
 Saerens, M., Latinne, P., & Decaestecker, C. (2002). Adjusting
 the outputs of a classifier to new a priori probabilities: a simple procedure.
-Neural computation.<doi.org/10.1162/089976602753284446>
+Neural computation.<doi.org/10.1162/089976602753284446>.
 }

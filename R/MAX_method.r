@@ -3,13 +3,14 @@
 #' It quantifies events based on testing scores, applying MAX method, according to
 #' Forman (2006). Same as T50, but it sets the threshold where \code{tpr}–\code{fpr}
 #' is maximized.
-#' @param test a numeric \code{vector} of scores predicted from the test set.
+#' @param test a numeric \code{vector} containing the score estimated for the positive class from
+#' each test set instance.
 #' @param TprFpr a \code{data.frame} of true positive (\code{tpr}) and false positive (\code{fpr})
 #' rates estimated on training set, using the function \code{getTPRandFPRbyThreshold()}.
 #' @return the class distribution in the test set.
 #' @references Forman, G. (2006, August). Quantifying trends accurately despite classifier
 #' error and class imbalance. In Proceedings of the 12th ACM SIGKDD international conference
-#' on Knowledge discovery and data mining (pp. 157-166).<doi.org/10.1145/1150402.1150423>
+#' on Knowledge discovery and data mining (pp. 157-166).<doi.org/10.1145/1150402.1150423>.
 #' @usage MAX(test, TprFpr)
 #' @export
 #' @examples

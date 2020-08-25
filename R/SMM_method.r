@@ -7,7 +7,8 @@
 #' validation set or from a cross-validation method.
 #' @param n.score a numeric \code{vector} of negative scores estimated either from a
 #' validation set or from a cross-validation method.
-#' @param test a numeric \code{vector} of scores predicted from the test set.
+#' @param test a numeric \code{vector} containing the score estimated for the positive class from
+#' each test set instance.
 #' @usage SMM(p.score, n.score, test)
 #' @references Hasan, W., Maletzke, A., Batista, G. (2020). Accurately Quantifying a Billion Instances
 #' per Second. In IEEE International Conference on Data Science and Advanced Analytics (DSAA).

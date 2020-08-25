@@ -96,6 +96,8 @@ DyS_distance <- function (x, method= "hellinger"){
       re <- re + ( (x[1,i] - x[2,i] )^2 / (x[1,i] +x[2,i]) )
     return(2*re)
   }
+
+  stop("measure argument must be a valid option")
 }
 
 

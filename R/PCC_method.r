@@ -2,13 +2,14 @@
 #'
 #' It quantifies events based on testing scores, applying the Probabilistic Classify
 #' and Count (PCC) method.
-#' @param test a numeric \code{vector} of scores predicted from the test set (NOTE: It
-#' requires calibrated scores. See \link[CORElearn]{calibrate} from \pkg{CORElearn}).
+#' @param test a numeric \code{vector} containing the score estimated for the positive class from
+#' each test set instance. (NOTE: It requires calibrated scores. See \link[CORElearn]{calibrate}
+#' from \pkg{CORElearn}).
 #' @return the class distribution in the test set.
 #' @usage PCC(test)
 #' @references Bella, A., Ferri, C., Hernández-Orallo, J., & Ramírez-Quintana,
 #' M. J. (2010). Quantification via probability estimators. In IEEE International
-#' Conference on Data Mining (pp. 737–742). Sidney.<doi.org/10.1109/ICDM.2010.75>
+#' Conference on Data Mining (pp. 737–742). Sidney.<doi.org/10.1109/ICDM.2010.75>.
 #' @export
 #' @examples
 #' library(randomForest)

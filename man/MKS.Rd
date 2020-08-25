@@ -13,7 +13,8 @@ validation set or from a cross-validation method.}
 \item{n.score}{a numeric \code{vector} of negative scores estimated either from a
 validation set or from a cross-validation method.}
 
-\item{test}{a numeric \code{vector} of scores predicted from the test set.}
+\item{test}{a numeric \code{vector} containing the score estimated for the positive class from
+each test set instance.}
 }
 \value{
 the class distribution in the test set.

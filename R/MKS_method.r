@@ -6,7 +6,8 @@
 #' validation set or from a cross-validation method.
 #' @param n.score a numeric \code{vector} of negative scores estimated either from a
 #' validation set or from a cross-validation method.
-#' @param test a numeric \code{vector} of scores predicted from the test set.
+#' @param test a numeric \code{vector} containing the score estimated for the positive class from
+#' each test set instance.
 #' @return the class distribution in the test set.
 #' @references Maletzke, A., Reis, D., Cherman, E., & Batista, G. (2019). DyS:
 #' a Framework for Mixture Models in Quantification. in Proceedings of the The

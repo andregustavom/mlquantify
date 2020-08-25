@@ -7,7 +7,8 @@
 CC(test, thr=0.5)
 }
 \arguments{
-\item{test}{a numeric \code{vector} containing the scores estimated from the test set.}
+\item{test}{a numeric \code{vector} containing the score estimated for the positive class from each
+test set instance.}
 
 \item{thr}{a numeric value indicating the decision threshold. A value between 0 and 1 (default = \code{0.5})}
 }
@@ -35,5 +36,5 @@ CC(test = test.scores[,1])
 \references{
 Forman, G. (2005). Counting positives accurately despite inaccurate
 classification. In European Conference on Machine Learning. Springer, Berlin,
-Heidelberg.<doi.org/10.1007/11564096_55>
+Heidelberg.<doi.org/10.1007/11564096_55>.
 }

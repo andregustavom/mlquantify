@@ -5,7 +5,8 @@
 #' applying the Expectation Maximization for Quantification (EMQ) method proposed by
 #' Saerens et al. (2002).
 #' @param train a \code{data.frame} of the labeled set.
-#' @param test a numeric vector of scores predicted from the test set.
+#' @param test a numeric \code{matrix} of scores predicted from each test set instance.
+#' First column must be the positive score.
 #' @param it maximum number of iteration steps (default \code{5}).
 #' @param e a numeric value for the stop threshold (default \code{NULL}). If the
 #' difference between two consecutive steps is lower or equal than \code{e}, the
@@ -14,7 +15,7 @@
 #' @return the class distribution in the test set.
 #' @references Saerens, M., Latinne, P., & Decaestecker, C. (2002). Adjusting
 #' the outputs of a classifier to new a priori probabilities: a simple procedure.
-#' Neural computation.<doi.org/10.1162/089976602753284446>
+#' Neural computation.<doi.org/10.1162/089976602753284446>.
 #' @usage EMQ(train, test, it=5, e=NULL)
 #' @examples
 #' library(randomForest)

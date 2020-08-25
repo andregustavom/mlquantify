@@ -7,7 +7,8 @@
 ACC(test, TprFpr, thr=0.5)
 }
 \arguments{
-\item{test}{a numeric \code{vector} of scores predicted from the test set.}
+\item{test}{a numeric \code{vector} containing the score estimated for the positive class from
+each test set instance.}
 
 \item{TprFpr}{a \code{data.frame} of true positive (\code{tpr}) and false positive (\code{fpr})
 rates estimated on training set, using the function \code{getTPRandFPRbyThreshold()}.}
@@ -43,5 +44,5 @@ ACC(test = test.scores[,1], TprFpr = TprFpr)
 \references{
 Forman, G. (2006, August). Quantifying trends accurately despite classifier
 error and class imbalance. In ACM SIGKDD international conference on Knowledge discovery
-and data mining (pp. 157-166).<doi.org/10.1145/1150402.1150423>
+and data mining (pp. 157-166).<doi.org/10.1145/1150402.1150423>.
 }

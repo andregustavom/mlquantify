@@ -2,13 +2,14 @@
 #'
 #' It quantifies events based on testing scores, applying the Classify and Count (CC). CC is the simplest
 #' quantification method that derives from classification (Forman, 2005).
-#' @param test a numeric \code{vector} containing the scores estimated from the test set.
+#' @param test a numeric \code{vector} containing the score estimated for the positive class from each
+#' test set instance.
 #' @param thr a numeric value indicating the decision threshold. A value between 0 and 1 (default = \code{0.5})
 #' @return the class distribution in the test set.
 #' @usage CC(test, thr=0.5)
 #' @references Forman, G. (2005). Counting positives accurately despite inaccurate
 #' classification. In European Conference on Machine Learning. Springer, Berlin,
-#' Heidelberg.<doi.org/10.1007/11564096_55>
+#' Heidelberg.<doi.org/10.1007/11564096_55>.
 #' @examples
 #' library(randomForest)
 #' library(caret)
