@@ -1,10 +1,11 @@
 Package: mlquantify
 Type: Package
 Title: Algorithms for Class Distribution Estimation
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: c(
     person("Andre", "Maletzke", email = "andregustavom@gmail.com", role = c("aut","cre")),
     person("Everton", "Cherman", email = "evertoncherman@gmail.com", role = "ctb"),
+    person("Denis", "dos Reis", email = "denismr@gmail.com", role = "ctb"),
     person("Gustavo", "Batista", email = "g.batista@unsw.edu.au", role = "ths"))
 Maintainer: Andre Maletzke <andregustavom@gmail.com>
 Description: Quantification is a prominent machine learning task that has received an 

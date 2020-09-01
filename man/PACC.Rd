@@ -40,17 +40,17 @@ ts_sample <- rbind(ts[sample(which(ts$class==1),80),],
 scorer <- randomForest(class~., data=tr, ntree=500)
 scores <- cbind(predict(scorer, validation, type = c("prob")), validation$class)
 TprFpr <- getTPRandFPRbyThreshold(scores)
-test.scores <- predict(scorer, ts_sample, type = c("prob"))
+test.scores <- predict(scorer, ts_sample, type = c("prob"))[,1]
 
-\dontrun{
-# -- PACC requires calibrated scores. calibrate function from the CORElearn --
-# -- package performs the testing scores calibration --.
-
-library(CORElearn)
-cal_tr <- calibrate(as.factor(scores[,3]), scores[,1], class1=1,
-method="isoReg",assumeProbabilities=TRUE)
-test.scores <- applyCalibration(test.scores[,1], cal_tr)
-}
+# -- PCC requires calibrated scores. Be aware of doing this before using PCC --
+# You can make it using calibrate function from the CORElearn package.
+# Uncomment the next line to get calibrated scores. --
+# if (!require(CORElearn))
+#    install.packages("CORElearn")
+# library(CORElearn)
+# cal_tr <- calibrate(as.factor(scores[,3]), scores[,1], class1=1,
+# method="isoReg",assumeProbabilities=TRUE)
+# test.scores <- applyCalibration(test.scores, cal_tr)
 
 PACC(test = test.scores, TprFpr = TprFpr)
 }
