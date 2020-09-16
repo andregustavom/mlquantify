@@ -39,6 +39,6 @@ SMM(p.score = scores[scores[,3]==1,1], n.score = scores[scores[,3]==2,1],
 test = test.scores[,1])
 }
 \references{
-Hasan, W., Maletzke, A., Batista, G. (2020). Accurately Quantifying a Billion Instances
+Hassan, W., Maletzke, A., Batista, G. (2020). Accurately Quantifying a Billion Instances
 per Second. In IEEE International Conference on Data Science and Advanced Analytics (DSAA).
 }

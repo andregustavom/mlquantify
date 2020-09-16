@@ -10,7 +10,7 @@
 #' @param test a numeric \code{vector} containing the score estimated for the positive class from
 #' each test set instance.
 #' @usage SMM(p.score, n.score, test)
-#' @references Hasan, W., Maletzke, A., Batista, G. (2020). Accurately Quantifying a Billion Instances
+#' @references Hassan, W., Maletzke, A., Batista, G. (2020). Accurately Quantifying a Billion Instances
 #' per Second. In IEEE International Conference on Data Science and Advanced Analytics (DSAA).
 #' @export
 #' @examples

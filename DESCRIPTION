@@ -1,7 +1,7 @@
 Package: mlquantify
 Type: Package
 Title: Algorithms for Class Distribution Estimation
-Version: 0.1.3
+Version: 0.1.4
 Authors@R: c(
     person("Andre", "Maletzke", email = "andregustavom@gmail.com", role = c("aut","cre")),
     person("Everton", "Cherman", email = "evertoncherman@gmail.com", role = "ctb"),
@@ -13,9 +13,9 @@ Description: Quantification is a prominent machine learning task that has receiv
     class distribution of a data sample. This package is a collection of machine learning 
     algorithms for class distribution estimation. This package include algorithms from
     different paradigms of quantification. These methods are described in the paper: 
-    A. Maletzke, W. Hassan, D. d. Reis, and G. Batista. The importance of the test set 
+    A. Maletzke, W. Hassan, D. dos Reis, and G. Batista. The importance of the test set 
     size in quantification assessment. In Proceedings of the Twenty-Ninth International 
-    Joint Conference on Artificial Intelligence, IJCAI-20, pages 2640–2646, 2020.
+    Joint Conference on Artificial Intelligence, IJCAI20, pages 2640–2646, 2020.
     <doi:10.24963/ijcai.2020/366>.
 License: GPL (>= 2.0)
 Encoding: UTF-8
@@ -23,7 +23,7 @@ LazyData: true
 NeedsCompilation: no
 Author: Andre Maletzke [aut, cre],
   Everton Cherman [ctb],
-  Denis dos reis [ctb],
+  Denis dos Reis [ctb],
   Gustavo Batista [ths]
 RoxygenNote: 7.1.1
 BugReports: https://github.com/andregustavom/mlquantify/issues
