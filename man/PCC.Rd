@@ -35,11 +35,11 @@ test.scores <- predict(scorer, ts_sample, type = c("prob"))[,1]
 
 # -- PCC requires calibrated scores. Be aware of doing this before using PCC --
 # -- You can make it using calibrate function from the CORElearn package --
-if(requireNamespace("CORElearn")){
-  cal_tr <- CORElearn::calibrate(as.factor(scores[,3]), scores[,1], class1=1,
-  method="isoReg",assumeProbabilities=TRUE)
-  test.scores <- CORElearn::applyCalibration(test.scores, cal_tr)
-}
+#if(requireNamespace("CORElearn")){
+#   cal_tr <- CORElearn::calibrate(as.factor(scores[,3]), scores[,1], class1=1,
+#   method="isoReg",assumeProbabilities=TRUE)
+#   test.scores <- CORElearn::applyCalibration(test.scores, cal_tr)
+# }
 PCC(test=test.scores)
 }
 \references{

@@ -5,7 +5,7 @@ This project presents a framework to deal with a recently proposed machine learn
 
 We include the most relevant quantification methods, aiming for their applicability and the experiments' reproducibility. Summing up, the following methods are available in this R package:
 
-  + Classify and Cout (Forman, 2005)
+  + Classify and Count (Forman, 2005)
   + Adjusted Classify and Count (Forman, 2005)
   + Probabilistic Classify and Count (Bella et al., 2010)
   + Probabilistic Adjusted Classify and Count (Bella et al., 2010)
@@ -196,5 +196,5 @@ We hope this package helps you somehow. To cite `mlquantify`, please, use: _A. M
   Saerens, M., Latinne, P., & Decaestecker, C. (2002). Adjusting the outputs of a classifier to new a priori probabilities: a simple procedure. _Neural computation_, 14(1), 21-41. [link](https://doi.org/10.1162/089976602753284446)
   + González-Castro, V., Alaiz-Rodríguez, R., & Alegre, E. (2013). Class distribution estimation based on the Hellinger distance. _Information Sciences_, 218, 146-164. [link](https://doi.org/10.1016/j.ins.2012.05.028)
   + Maletzke, A., dos Reis, D., Cherman, E., & Batista, G. (2019, July). DyS: A Framework for Mixture Models in Quantification. In _Proceedings of the AAAI Conference on Artificial Intelligence_ (Vol. 33, pp. 4552-4560). [link](https://doi.org/10.1609/aaai.v33i01.33014552)
-  + Hasan, W., Maletzke, A., Batista, G. (2020). Accurately Quantifying a Billion Instances per Second. In _IEEE International Conference on Data Science and Advanced Analytics_ (DSAA) (**forthcoming**).
+  + Hasan, W., Maletzke, A., Batista, G. (2020). Accurately Quantifying a Billion Instances per Second. In _IEEE International Conference on Data Science and Advanced Analytics_ (DSAA). [link](https://doi.org/10.1109/DSAA49011.2020.00012).
 

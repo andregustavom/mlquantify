@@ -1,7 +1,7 @@
 Package: mlquantify
 Type: Package
 Title: Algorithms for Class Distribution Estimation
-Version: 0.1.4
+Version: 0.1.5
 Authors@R: c(
     person("Andre", "Maletzke", email = "andregustavom@gmail.com", role = c("aut","cre")),
     person("Everton", "Cherman", email = "evertoncherman@gmail.com", role = "ctb"),
