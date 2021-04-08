@@ -44,7 +44,7 @@ test.scores <- predict(scorer, ts_sample, type = c("prob"))[,1]
 
 # -- PACC requires calibrated scores. Be aware of doing this before using PACC --
 # -- You can make it using calibrate function from the CORElearn package --
-#if(requireNamespace("CORElearn")){
+# if(requireNamespace("CORElearn")){
 #    cal_tr <- CORElearn::calibrate(as.factor(scores[,3]), scores[,1], class1=1,
 #    method="isoReg",assumeProbabilities=TRUE)
 #    test.scores <- CORElearn::applyCalibration(test.scores, cal_tr)
