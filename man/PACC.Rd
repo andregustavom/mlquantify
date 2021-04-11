@@ -19,7 +19,7 @@ from \pkg{CORElearn}).}
 Default is \code{0.5}.}
 }
 \value{
-the class distribution in the test set.
+A numeric vector containing the class distribution estimated from the test set.
 }
 \description{
 It quantifies events based on testing scores, applying the Probabilistic Adjusted

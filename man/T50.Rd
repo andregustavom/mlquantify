@@ -15,7 +15,7 @@ each test set instance.}
 \code{getTPRandFPRbyThreshold()}.}
 }
 \value{
-the class distribution in the test set.
+A numeric vector containing the class distribution estimated from the test set.
 }
 \description{
 It quantifies events based on testing scores, applying T50 method proposed by

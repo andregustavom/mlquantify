@@ -6,7 +6,7 @@
 #' each test set instance.
 #' @param TprFpr a \code{data.frame} of true positive (\code{tpr}) and false positive (\code{fpr})
 #' rates estimated on training set, using the function \code{getTPRandFPRbyThreshold()}.
-#' @return the class distribution in the test set.
+#' @return A numeric vector containing the class distribution estimated from the test set.
 #' @references Forman, G. (2006, August). Quantifying trends accurately despite classifier
 #' error and class imbalance. In Proceedings of the 12th ACM SIGKDD international conference
 #' on Knowledge discovery and data mining (pp. 157-166).<doi.org/10.1145/1150402.1150423>.

@@ -14,7 +14,7 @@ each test set instance.}
 rates estimated on training set, using the function \code{getTPRandFPRbyThreshold()}.}
 }
 \value{
-the class distribution in the test set.
+A numeric vector containing the class distribution estimated from the test set.
 }
 \description{
 It quantifies events based on testing scores, applying MAX method, according to

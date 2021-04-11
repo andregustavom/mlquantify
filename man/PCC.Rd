@@ -12,7 +12,7 @@ each test set instance. (NOTE: It requires calibrated scores. See \link[CORElear
 from \pkg{CORElearn}).}
 }
 \value{
-the class distribution in the test set.
+A numeric vector containing the class distribution estimated from the test set.
 }
 \description{
 It quantifies events based on testing scores, applying the Probabilistic Classify

@@ -8,7 +8,7 @@
 #' validation set or from a cross-validation method.
 #' @param test a numeric \code{vector} containing the score estimated for the positive class from
 #' each test set instance.
-#' @return the class distribution in the test set.
+#' @return A numeric vector containing the class distribution estimated from the test set.
 #' @references Maletzke, A., Reis, D., Cherman, E., & Batista, G. (2019). DyS:
 #' a Framework for Mixture Models in Quantification. in Proceedings of the The
 #' Thirty-Third AAAI Conference on Artificial Intelligence, ser. AAAI’19, 2019.<doi.org/10.1609/aaai.v33i01.33014552>

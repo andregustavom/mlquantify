@@ -1,17 +1,3 @@
-
-#' Get a normalized histogram from score values.
-#'
-#' @param scores a numeric vector containing the scores.
-#' @param nbins number of histogram bins.
-#' @return normalized histogram.
-#' @author Andre Maletzke <andregustavom@gmail.com>
-#' @usage getHist(scores, nbins)
-#' @export
-#' @examples
-#' positive_scores <- runif(200)^0.3
-#' negative_scores <- 1 - runif(200)^0.3
-#' getHist(positive_scores, 20)
-#' getHist(negative_scores, 20)
 getHist <- function(scores, nbins){
   breaks <- seq(0,1,length.out = nbins+1)
   breaks <- c(breaks[-length(breaks)], 1.1)
@@ -23,16 +9,6 @@ getHist <- function(scores, nbins){
 }
 
 
-#' Implements the Ternary Search algorithm
-#'
-#' Ternary search is used for finding the best alpha value in DyS framework.
-#' @param left a numeric value containing the left bound.
-#' @param right a numeric value containing the right bound.
-#' @param f unimodal function.
-#' @param eps stop criterium.
-#' @return  the minimum of a unimodal function \code{f()} within \code{[left, right]}.
-#' @author Andre Maletzke <andregustavom@gmail.com>
-#' @export
 TernarySearch  <- function(left, right, f, eps=1e-4){
   while(TRUE){
     if (abs(left - right) < eps) return((left + right) / 2)
@@ -48,9 +24,6 @@ TernarySearch  <- function(left, right, f, eps=1e-4){
 
 }
 
-#' Calculates the distances for DyS method
-#'
-#'@keywords internal
 DyS_distance <- function (x, method= "hellinger"){
 
   if (method == "ord") {

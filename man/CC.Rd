@@ -13,7 +13,7 @@ test set instance.}
 \item{thr}{a numeric value indicating the decision threshold. A value between 0 and 1 (default = \code{0.5})}
 }
 \value{
-the class distribution in the test set.
+A numeric vector containing the class distribution estimated from the test set.
 }
 \description{
 It quantifies events based on testing scores, applying the Classify and Count (CC). CC is the simplest

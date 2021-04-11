@@ -12,7 +12,7 @@
 #' difference between two consecutive steps is lower or equal than \code{e}, the
 #' iterative process will be stopped. If \code{e} is null then the iteration
 #' phase is defined by the \code{it} parameter.
-#' @return the class distribution in the test set.
+#' @return A numeric vector containing the class distribution estimated from the test set.
 #' @references Saerens, M., Latinne, P., & Decaestecker, C. (2002). Adjusting
 #' the outputs of a classifier to new a priori probabilities: a simple procedure.
 #' Neural computation.<doi.org/10.1162/089976602753284446>.

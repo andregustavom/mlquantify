@@ -17,7 +17,7 @@ validation set or from a cross-validation method.}
 each test set instance.}
 }
 \value{
-the class distribution in the test set.
+A numeric vector containing the class distribution estimated from the test set.
 }
 \description{
 It computes the class distribution using the HDy algorithm proposed by González-Castro et al. (2013)

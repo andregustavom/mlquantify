@@ -28,7 +28,7 @@ representing the score distribution. (default: \code{seq(2,20,2)}).}
 (default: \code{1e5}).}
 }
 \value{
-the class distribution in the test.
+A numeric vector containing the class distribution estimated from the test set.
 }
 \description{
 DyS is a framework for quantification data based on mixture models method. It quantifies

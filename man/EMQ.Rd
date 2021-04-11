@@ -20,7 +20,7 @@ iterative process will be stopped. If \code{e} is null then the iteration
 phase is defined by the \code{it} parameter.}
 }
 \value{
-the class distribution in the test set.
+A numeric vector containing the class distribution estimated from the test set.
 }
 \description{
 This method is an instance of the well-known algorithm for finding maximum-likelihood

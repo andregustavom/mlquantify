@@ -16,6 +16,9 @@ validation set or from a cross-validation method.}
 \item{test}{a numeric \code{vector} containing the score estimated for the positive class from
 each test set instance.}
 }
+\value{
+A numeric vector containing the class distribution estimated from the test set.
+}
 \description{
 SMM is a member of the DyS framework that uses simple means scores to represent the score distribution
 for positive, negative, and unlabelled scores. Therefore, the class distribution is given by a

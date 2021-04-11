@@ -8,7 +8,7 @@
 #' validation set or from a cross-validation method.
 #' @param test a numeric \code{vector} containing the score estimated for the positive class from
 #' each test set instance.
-#' @return the estimated class distribution.
+#' @return A numeric vector containing the class distribution estimated from the test set.
 #' @usage SORD(p.score, n.score, test)
 #' @references Maletzke, A., Reis, D., Cherman, E., & Batista, G. (2019). DyS: a
 #' Framework for Mixture Models in Quantification. in Proceedings of the The

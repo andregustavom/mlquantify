@@ -5,7 +5,7 @@
 #' @param test a numeric \code{vector} containing the score estimated for the positive class from
 #' each test set instance. (NOTE: It requires calibrated scores. See \link[CORElearn]{calibrate}
 #' from \pkg{CORElearn}).
-#' @return the class distribution in the test set.
+#' @return A numeric vector containing the class distribution estimated from the test set.
 #' @usage PCC(test)
 #' @references Bella, A., Ferri, C., Hernández-Orallo, J., & Ramírez-Quintana,
 #' M. J. (2010). Quantification via probability estimators. In IEEE International

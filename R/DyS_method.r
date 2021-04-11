@@ -17,7 +17,7 @@
 #' representing the score distribution. (default: \code{seq(2,20,2)}).
 #' @param err a numeric value defining the accepted error for the ternary search
 #' (default: \code{1e5}).
-#' @return the class distribution in the test.
+#' @return A numeric vector containing the class distribution estimated from the test set.
 #' @usage DyS(p.score, n.score, test, measure="topsoe", bins=seq(2,20,2), err=1e-5)
 #' @references Maletzke, A., Reis, D., Cherman, E., & Batista, G. (2019). DyS: a Framework
 #' for Mixture Models in Quantification. in Proceedings of the The Thirty-Third AAAI
@@ -62,5 +62,7 @@ DyS <- function(p.score, n.score, test, measure="topsoe", bins=seq(2,20,2), err=
   result <- c(result, 1 - result)
   names(result) <- c("+", "-")
   return(result)
+
+
 
 }

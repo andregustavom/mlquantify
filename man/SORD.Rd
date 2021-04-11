@@ -17,7 +17,7 @@ validation set or from a cross-validation method.}
 each test set instance.}
 }
 \value{
-the estimated class distribution.
+A numeric vector containing the class distribution estimated from the test set.
 }
 \description{
 It quantifies events based on testing scores applying the framework DyS with the

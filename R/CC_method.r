@@ -5,7 +5,7 @@
 #' @param test a numeric \code{vector} containing the score estimated for the positive class from each
 #' test set instance.
 #' @param thr a numeric value indicating the decision threshold. A value between 0 and 1 (default = \code{0.5})
-#' @return the class distribution in the test set.
+#' @return A numeric vector containing the class distribution estimated from the test set.
 #' @usage CC(test, thr=0.5)
 #' @references Forman, G. (2005). Counting positives accurately despite inaccurate
 #' classification. In European Conference on Machine Learning. Springer, Berlin,

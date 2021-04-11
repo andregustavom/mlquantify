@@ -9,6 +9,7 @@
 #' validation set or from a cross-validation method.
 #' @param test a numeric \code{vector} containing the score estimated for the positive class from
 #' each test set instance.
+#' @return A numeric vector containing the class distribution estimated from the test set.
 #' @usage SMM(p.score, n.score, test)
 #' @references Hassan, W., Maletzke, A., Batista, G. (2020). Accurately Quantifying a Billion Instances
 #' per Second. In IEEE International Conference on Data Science and Advanced Analytics (DSAA).

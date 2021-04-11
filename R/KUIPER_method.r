@@ -8,7 +8,7 @@
 #' validation set or from a cross-validation method.
 #' @param test a numeric \code{vector} containing the score estimated for the positive class from
 #' each test set instance.
-#' @return the class distribution in the test set.
+#' @return A numeric vector containing the class distribution estimated from the test set.
 #' @author Denis dos Reis <denismr@gmail.com>
 #' @usage KUIPER(p.score, n.score, test)
 #' @export

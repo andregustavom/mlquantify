@@ -8,7 +8,7 @@
 #' validation set or from a cross-validation method.
 #' @param test a numeric \code{vector} containing the score estimated for the positive class from
 #' each test set instance.
-#' @return the class distribution in the test set.
+#' @return A numeric vector containing the class distribution estimated from the test set.
 #' @author Andre Maletzke <andregustavom@gmail.com>
 #' @usage HDy_LP(p.score, n.score, test)
 #' @references González-Castro, V., Alaíz-Rodriguez, R., & Alegre, E. (2013). Class

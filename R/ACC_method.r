@@ -9,7 +9,7 @@
 #' rates estimated on training set, using the function \code{getTPRandFPRbyThreshold()}.
 #' @param thr threshold value according to the \code{tpr} and \code{fpr} were learned.
 #' Default is \code{0.5}.
-#' @return the class distribution in the test set.
+#' @return A numeric vector containing the class distribution estimated from the test set.
 #' @usage ACC(test, TprFpr, thr=0.5)
 #' @references Forman, G. (2006, August). Quantifying trends accurately despite classifier
 #' error and class imbalance. In ACM SIGKDD international conference on Knowledge discovery
