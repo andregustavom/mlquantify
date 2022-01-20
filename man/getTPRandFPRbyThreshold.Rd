@@ -4,7 +4,7 @@
 \alias{getTPRandFPRbyThreshold}
 \title{Estimates true and false positive rates}
 \usage{
-getTPRandFPRbyThreshold(validation_scores, label_pos = 1, thr_range = seq(0.01,0.99,0.01))
+getTPRandFPRbyThreshold(validation_scores, label_pos = 1, thr_range = seq(0,1,0.01))
 }
 \arguments{
 \item{validation_scores}{\code{data.frame} scores estimated from the training set.

@@ -10,7 +10,7 @@
 #' @return \code{data.frame} where each row has both (\code{tpr} and \code{fpr}) rates for
 #' each threshold value. This function varies the threshold from 0.01 to 0.99 with
 #' increments 0.01.
-#' @usage getTPRandFPRbyThreshold(validation_scores, label_pos = 1, thr_range = seq(0.01,0.99,0.01))
+#' @usage getTPRandFPRbyThreshold(validation_scores, label_pos = 1, thr_range = seq(0,1,0.01))
 #' @author Everton Cherman <evertoncherman@gmail.com>
 #' @author Andre Maletzke <andregustavom@gmail.com>
 #' @examples
@@ -23,7 +23,7 @@
 #' scores <- cbind(predict(scorer, validation, type = c("prob")), validation$class)
 #' TprFpr <- getTPRandFPRbyThreshold(scores)
 #' @export
-getTPRandFPRbyThreshold <- function(validation_scores, label_pos = 1, thr_range = seq(0.01,0.99,0.01)){
+getTPRandFPRbyThreshold <- function(validation_scores, label_pos = 1, thr_range = seq(0,1,0.01)){
 
   TprFpr = NULL
   for (threshold in thr_range)

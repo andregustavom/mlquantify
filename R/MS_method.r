@@ -32,20 +32,22 @@
 
 MS <- function(test, TprFpr){
 
-  TprFpr <- TprFpr[which(abs(TprFpr[,2] - TprFpr[,3])>0),]
-
   if(nrow(TprFpr)==0){
     stop("Invalid TprFpr values. Possible tpr-fpr has produced zero values.")
   }
 
-  unique_scores <- TprFpr[,1]
+  unique_scores <- sort(unique(round(test,2)))
   prevalances_array = c(1:length(unique_scores))
+  n_test <- length(test)
   for(i in 1:length(unique_scores)){
     pos <- which(TprFpr[,'thr'] == unique_scores[i])
     tpr <- TprFpr[pos,'tpr']
     fpr <- TprFpr[pos,'fpr']
-    estimated_positive_ratio <- length(which(test>=unique_scores[i]))/length(test)
-    prevalances_array[i] <-  (abs(estimated_positive_ratio - fpr))/abs(tpr-fpr)
+    diff_tpr_fpr <- tpr-fpr
+    if(diff_tpr_fpr != 0){
+      estimated_positive_ratio <- length(which(test>=unique_scores[i]))/n_test
+      prevalances_array[i] <-  (estimated_positive_ratio - fpr)/(tpr-fpr)
+    }
   }
   result <- stats::median(prevalances_array)
   if(result < 0 ) result <- 0

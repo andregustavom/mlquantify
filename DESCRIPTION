@@ -1,7 +1,7 @@
 Package: mlquantify
 Type: Package
 Title: Algorithms for Class Distribution Estimation
-Version: 0.1.5
+Version: 0.2.0
 Authors@R: c(
     person("Andre", "Maletzke", email = "andregustavom@gmail.com", role = c("aut","cre")),
     person("Everton", "Cherman", email = "evertoncherman@gmail.com", role = "ctb"),
@@ -31,6 +31,7 @@ URL: https://github.com/andregustavom/mlquantify
 Imports: 
     caret,
     randomForest,
-    stats
+    stats,
+    FNN
 Suggests:
     CORElearn

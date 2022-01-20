@@ -8,7 +8,7 @@
 #' @param test a numeric \code{matrix} of scores predicted from each test set instance.
 #' First column must be the positive score.
 #' @param it maximum number of iteration steps (default \code{5}).
-#' @param e a numeric value for the stop threshold (default \code{NULL}). If the
+#' @param e a numeric value for the stop threshold (default \code{1e-4}). If the
 #' difference between two consecutive steps is lower or equal than \code{e}, the
 #' iterative process will be stopped. If \code{e} is null then the iteration
 #' phase is defined by the \code{it} parameter.
@@ -16,76 +16,39 @@
 #' @references Saerens, M., Latinne, P., & Decaestecker, C. (2002). Adjusting
 #' the outputs of a classifier to new a priori probabilities: a simple procedure.
 #' Neural computation.<doi.org/10.1162/089976602753284446>.
-#' @usage EMQ(train, test, it=5, e=NULL)
+#' @usage EMQ(train, test, it=5, e=1e-4)
 #' @examples
 #' library(randomForest)
 #' library(caret)
-#' cv <- createFolds(aeAegypti$class, 3)
+#' cv <- createFolds(aeAegypti$class, 2)
 #' tr <- aeAegypti[cv$Fold1,]
-#' validation <- aeAegypti[cv$Fold2,]
-#' ts <- aeAegypti[cv$Fold3,]
+#' ts <- aeAegypti[cv$Fold2,]
 #'
 #' # -- Getting a sample from ts with 80 positive and 20 negative instances --
 #' ts_sample <- rbind(ts[sample(which(ts$class==1),80),],
 #'                    ts[sample(which(ts$class==2),20),])
 #' scorer <- randomForest(class~., data=tr, ntree=500)
-#' scores <- cbind(predict(scorer, validation, type = c("prob")), validation$class)
 #' test.scores <- predict(scorer, ts_sample, type = c("prob"))
 #' EMQ(train=tr, test=test.scores)
 #' @export
 
-EMQ <- function(train, test, it=5, e=NULL){
+EMQ <- function(train, test, it=5, e=1e-4){
 
-  pTr      <- table(train$class)/nrow(train)
-  predTe_s <- test
-
-    p   <- list(predTe_s)
-  pTe <- list(pTr)
-  nE  <- nrow(test)
-  nC  <- 2
-  s   <- 1
-
-  if(is.null(e)){
-    repeat{
-      aux <- matrix(ncol=nC, nrow = nE)
-      auxC <- c(1:nC)
-      for (ic in 1:nC){
-        for(ie in 1:nE){
-          numerator   <- (pTe[[s]][ic]/pTr[ic])*predTe_s[ie,ic]
-          denominator <- c(1:nC)
-          for(ic2 in 1:nC)  denominator[ic2] <- (pTe[[s]][ic2]/pTr[ic2])*predTe_s[ie,ic2]
-          aux[ie,ic] <- numerator/sum(denominator)
-        }
-        auxC[ic] <- sum(p[[s]][,ic])/nrow(test)
-      }
-      pTe <- c(pTe, list(auxC))
-      p   <- c(p, list(aux))
-      s <- s + 1
-
-      if(s > it ){break}
-    }
-  }else{
-    repeat{
-      aux <- matrix(ncol=nC, nrow = nE)
-      auxC <- c(1:nC)
-      for (ic in 1:nC){
-        for(ie in 1:nE){
-          numerator   <- (pTe[[s]][ic]/pTr[ic])*predTe_s[ie,ic]
-          denominator <- c(1:nC)
-          for(ic2 in 1:nC)  denominator[ic2] <- (pTe[[s]][ic2]/pTr[ic2])*predTe_s[ie,ic2]
-          aux[ie,ic] <- numerator/sum(denominator)
-        }
-        auxC[ic] <- sum(p[[s]][,ic])/nrow(test)
-      }
-      pTe <- c(pTe, list(auxC))
-      p   <- c(p, list(aux))
-      s <- s + 1
-
-      if(abs((pTe[[s]][1]-pTe[[s-1]][[1]])) <= e ){break}
-    }
+  pTr <- as.numeric(table(train$class)/nrow(train))
+  pTe  <- pTr
+  si   <- 1
+  test <- as.matrix(test)
+  pTe_bf <- c(0,0)
+  repeat{
+    p_s <- t(apply(test, 1, function(x){x* (pTe / pTr)}))
+    p_s <- p_s / apply(p_s, 1, sum)
+    pTe = as.numeric(apply(p_s, 2, mean))
+    si <- si + 1
+    dist_diff <- (abs(pTe[1] - pTe_bf[1]) + abs(pTe[2] - pTe_bf[2]))/2
+    pTe_bf <- pTe
+    if((si > it)|(dist_diff <= e)){break}
   }
-
-  result <- pTe[[s]][1]
+  result <- pTe[1]
   if(result < 0 ) result <- 0
   if(result > 1 ) result <- 1
   result <- c(result, 1 - result)
